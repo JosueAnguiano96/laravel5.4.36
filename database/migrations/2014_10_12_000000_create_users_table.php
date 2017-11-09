@@ -22,6 +22,12 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
     }
+    /*
+    string - varchar
+    increments - autoincrement
+    int - integer
+    */
+
 
     /**
      * Reverse the migrations.
