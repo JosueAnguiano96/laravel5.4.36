@@ -15,8 +15,8 @@ class CreatePeriodoTable extends Migration
     {
         Schema::create('periodo', function (Blueprint $table) {
             $table->increments('idperiodo')->unique();
-            $table->integer('tipo', 1);
-            $table->integer('ano',4);
+            $table->integer('tipo')->unsigned();
+            $table->integer('ano')->unsigned();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -17,7 +17,7 @@ class CreateAsisTrabajadorTable extends Migration
             $table->increments('idasisTrabajador')->unique();
             $table->string('hora',9);
             $table->string('dia',10);
-            $table->timestamps('registro',6);
+            //$table->timestamps('registro',6);
             $table->integer('idclase')->unsigned();
             $table->integer('idperiodo')->unsigned();
             $table->timestamps();
