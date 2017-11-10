@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateAsisAlumnoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id')->unique();
-            $table->string('usuario',45);
-            $table->string('contrasena',100);
-            $table->string('rol',1);
-            $table->integer('idtrabajador')->unsigned();
-            $table->rememberToken();
+        Schema::create('asisAlumno', function (Blueprint $table) {
+            $table->increments('idasisAlumno')->unique();
+            $table->string('hora',9);
+            $table->string('dia',10);
+            $table->timestamps('registro',6);
+            $table->integer('idclase')->unsigned();
+            $table->integer('idperiodo')->unsigned();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
     /*
@@ -37,6 +38,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('asisAlumno');
     }
 }
