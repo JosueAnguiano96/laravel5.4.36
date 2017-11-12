@@ -12,11 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('menu');
+    return view('login');
 });
 
 Auth::routes();
 
+Route::get('/Login', 'Inicio@index')->name('login');
 Route::get('/Inicio', 'Inicio@index')->name('inicio');
 Route::get('/Trabajador', 'TrabajadorController@index')->name('inicio');
 Route::get('/Dia', 'DiaController@index')->name('inicio');
