@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/Inicio', 'Inicio@index')->name('inicio');
+Route::get('/Trabajador', 'TrabajadorController@index')->name('inicio');
+Route::get('/Dia', 'DiaController@index')->name('inicio');
+Route::get('/Grupo', 'GrupoController@index')->name('inicio');
+Route::get('/Alumno', 'AlumnoController@index')->name('inicio');
